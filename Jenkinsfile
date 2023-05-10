@@ -3,14 +3,14 @@ pipeline {
 
   environment {
     registry = "index.docker.io/v1/"
-    imageName = "kimjuhyo/docker-cicd-tomcat-test"
+    imageName = "mylove13/docker-cicd-tomcat-test"
   }
 
   stages {
     stage('Checkout') {
       agent any
       steps {
-        git branch: 'main', url: 'https://github.com/jhkim-09/test.git'
+        git branch: 'main', url: 'https://github.com/mylove13/test.git'
       }
     }
     stage('Build') {
